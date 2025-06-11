@@ -1,0 +1,8 @@
+tensorflow
+mediapipe
+opencv-python
+gTTS
+playsound
+numpy
+speechrecognition
+transformers
