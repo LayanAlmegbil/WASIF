@@ -54,10 +54,23 @@ Key take-aways → 85 % want such an app, 95 % currently use **no** tools, and r
 
 ---
 
+## Model Training Performance
+
+Our model was trained on the **KARSL-502** dataset using a hybrid CNN + Bi-LSTM architecture.  
+It achieved high accuracy and minimal overfitting over 10 epochs.
+
+### 📈 Accuracy & Loss Curves
+
+| Training vs Validation Accuracy | Training vs Validation Loss |
+|----------------------------------|-----------------------------|
+| <img src="images/Training_Validation_Accuracy.png" width="350"/> | <img src="images/Training_Validation_Loss.png" width="400"/> |
+
+---
+
 ## Visual Project Poster
 <img src="images/WASIF Project Poster.jpeg" width="400"/>
 
 ---
 
 ## Final Presentation  
-📥 [Download the presentation (PDF)](presentation/Presentation_of_WASIF.pdf)
+[Review the presentation (PDF)](presentation/Presentation_of_WASIF.pdf)
