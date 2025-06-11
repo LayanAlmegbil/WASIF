@@ -1,36 +1,63 @@
-# 🤟 Wasif: AI-Powered Arabic Sign Language Translator
+# 🤟 WASIF – AI-Powered Arabic Sign-Language Translator
 
-**Wasif** is a bi-directional communication system that bridges the gap between the Deaf/Mute community and the hearing world through real-time Arabic Sign Language recognition and generation using Artificial Intelligence.
+**WASIF** is a cross-platform, real-time system that bridges the communication gap between Deaf/Mute individuals and the hearing community by translating Arabic Sign Language gestures to speech/text ⇄ and spoken Arabic to animated sign language.
 
----
-
-## Project Objective
-
-To enable accessible and inclusive communication by:
-- Translating **sign language into Arabic speech** using computer vision and deep learning.
-- Converting **spoken Arabic into sign language** gestures performed by a 3D avatar.
+> **University Capstone** — Princess Nourah bint Abdulrahman University, Dept. of Computer Science  
+> **Academic Year** 2024 – 2025
+> 
+> **Supervisor** Dr. Eman Abdullah AlDakheel  
 
 ---
 
-## Key Features
+## Project Team
+| Name | Role |
+|------|------|
+| **Layan Yahya Almegbil** | Computer-Vision & ML Lead |
+| **Abeer Sultan AlAbdullatif** | Mobile Integration |
+| **Rimas Turki AlAqil** | UX / Back-end |
+| **Haifa Abdulkarim Alkhalaf** | Data & Evaluation |
 
-- 🔄 Bi-directional communication: Sign ↔ Speech
-- 🧠 Real-time AI processing
-- 🇸🇦 Fully supports Arabic language (text, voice, and sign)
-- 🛠️ Offline functionality for accessibility
-- 👤 3D avatar with automatic hand animation (MediaPipe + Unity)
-- 📱 Mobile-optimized for high-performance devices
+---
+## Problem & Objective
+Millions of Deaf and Mute individuals still lack reliable, inclusive communication tools—especially for Arabic.  
+**WASIF** empowers users to:
+
+* **Sign → Speech/Text:** Recognise Arabic sign gestures and vocalise them in natural Arabic.
+* **Speech/Text → Sign:** Convert spoken or typed Arabic into expressive 3-D avatar signs.
+* Work **offline** and in **real time**, on modern iOS & Android devices.
 
 ---
 
-## System Overview
+## User Insights (Survey n = 217)
+| Interest in an App | Current Tools in Use | Most-Desired Features |
+|--------------------|----------------------|-----------------------|
+| <img src="images/Interest_in_App.png" width="400"/> | <img src="images/Current_Tools.png" width="400"/> | <img src="images/Requested_Features.png" width="400"/> |
 
-### 1. Sign-to-Speech (Real-Time)
-- Detects hand landmarks using **MediaPipe**
-- Classifies the gesture using a trained **Keras deep learning model**
-- Converts the recognized sign to **Arabic text and speech** using `gTTS`
+Key take-aways → 85 % want such an app, 95 % currently use **no** tools, and real-time voice/sign translation tops the feature wish-list.
 
-### 2. Speech-to-Sign
-- Transcribes spoken Arabic using a **speech-to-text (STT)** model
-- Maps the recognized text to **sign language gestures**
-- Animates a 3D avatar (ReadyPlayerMe / Mixamo) using **Unity + landmark-based motion**
+---
+
+## Core Features
+* **Realtime Gesture Recognition** – MediaPipe hands + CNN-BiLSTM (KARSL-502, 3 M images).
+* **Arabic Speech Synthesis** – gTTS for high-quality Arabic audio.
+* **Speech-to-Sign** – STT (Transformers) → avatar animation in Unity via landmark streaming.
+* **Avatar Animation** – ReadyPlayerMe / Mixamo armature, manipulated directly from Python landmark arrays.
+* Offline & online modes, responsive Flutter UI, per-user sign customisation.
+
+---
+
+## System Components
+| Pipeline | Key Steps |
+|----------|-----------|
+| **Sign → Speech** | Camera → MediaPipe landmarks → CNN-BiLSTM classifier → Arabic text → gTTS audio |
+| **Speech → Sign** | Mic input → STT (Wav2Vec2/BERT) → gesture mapping → landmark generator → Unity avatar |
+
+---
+
+## Visual Project Poster
+<img src="images/WASIF Project Poster.jpeg" width="400"/>
+
+---
+
+## Final Presentation  
+📥 [Download the presentation (PDF)](presentation/Presentation_of_WASIF.pdf)
