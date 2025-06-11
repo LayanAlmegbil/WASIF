@@ -1,3 +1,5 @@
+<img src="images/wasif.png" alt="WASIF Poster" width="100%"/>
+
 # 🤟 WASIF – AI-Powered Arabic Sign-Language Translator
 
 **WASIF** is a cross-platform, real-time system that bridges the communication gap between Deaf/Mute individuals and the hearing community by translating Arabic Sign Language gestures to speech/text ⇄ and spoken Arabic to animated sign language.
